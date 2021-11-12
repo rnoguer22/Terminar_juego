@@ -1,5 +1,7 @@
+import random
 MIN = 0
 MAX = 99
+numero_bueno = random.randint(MIN,MAX)
 
 def pedir_numero ():
     while True:
