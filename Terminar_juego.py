@@ -5,15 +5,10 @@ numero_bueno = random.randint(MIN,MAX)
 
 def pedir_numero ():
     while True:
-        entrada = input ("Introduce un numero entre " + str(MIN) + " y " + str(MAX) + " :")
-        try:
-            int (entrada)
-        except:
-            pass
-        else: 
-            if 0 <= entrada <= 99:
-                break
-        return entrada
+        entrada = int (input ("Introduce un numero entre " + str(MIN) + " y " + str(MAX) + " :"))
+        if MIN <= entrada <= MAX:
+            break
+    return entrada
 
 print ("Comienza el juego, adivina el numero aleatorio")
 
