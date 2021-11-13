@@ -40,7 +40,7 @@ def pedir_numero (minimo=MIN, maximo=MAX):
     return entrada
 
 def ayuda():
-    ayudita = input (print ("Quiere recibir una pequeña ayudita? si o no? "))
+    ayudita = input ("Quiere recibir una pequeña ayudita? si o no? ")
     if ayudita == "si":
         print ("El numero esta comprendido entre " + str(MIN) + " y " + str(MAX))
     else:
@@ -54,7 +54,7 @@ hola = ayuda()
 print ("Comienza el juego, adivina el numero aleatorio")
 print ("Tienes " + str(intentos_max) + " intentos, dale a tope!!!")
 
-contador = 1
+contador = 0
 
 while contador < intentos_max: 
     intento = pedir_numero(minimo, maximo)
