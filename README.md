@@ -13,7 +13,7 @@ El diagrama de flujo es el siguiente:
 
 El codigo del juego es el siguiente:
 
-import random
+```import random
 MIN = 0
 MAX = 0
 intentos_max = 0
