@@ -32,12 +32,18 @@ minimo = MIN
 maximo = MAX
 print ("Comienza el juego, adivina el numero aleatorio")
 
+contador = 1
+
 while True: 
     intento = pedir_numero(minimo, maximo)
     if intento < numero_bueno:
+        contador += 1
         print("Demasiado pequeño")
     elif intento > numero_bueno:
+        contador += 1
         print ("Demasiado grande")
     else:
         print ("¡Ha ganado!")
+        contador += 1
+        print ("Ha necesitado ", contador, " intentos para conseguirlo")
         break
