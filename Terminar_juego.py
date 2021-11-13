@@ -22,10 +22,28 @@ while True:
 
 def pedir_numero (minimo=MIN, maximo=MAX):
     while True:
-        entrada = int (input ("Introduce un numero entre " + str(minimo) + " y " + str(maximo) + " : "))
+        entrada = input ("Introduce un numero: ")
+        try:
+            entrada = int (entrada)
+        except:
+            pass
         if  minimo <= entrada <= maximo:
             break
+        elif entrada > maximo or entrada < minimo:
+            print ("Ha introducido un numero que no esta dentro del rango de numeros del juego,"
+                    "repita por favor")
     return entrada
+
+def ayuda():
+    ayudita = input (print ("Quiere recibir una pequeña ayudita? si o no? "))
+    try:
+        if ayudita == "si" or ayudita == "no":
+            print ("El numero esta comprendido entre " + str(MIN) + " y " + str(MAX))
+        else:
+            print ("Como quieras...")
+    except:
+        pass
+    return ayudita
 
 numero_bueno = random.randint(MIN,MAX)
 minimo = MIN
