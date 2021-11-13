@@ -25,13 +25,13 @@ def pedir_numero (minimo=MIN, maximo=MAX):
         entrada = input ("Introduce un numero: ")
         try:
             entrada = int (entrada)
+            if  minimo <= entrada <= maximo:
+                break
+            else:
+                print ("Ha introducido un numero que no esta dentro del rango de numeros del juego,"
+                "repita por favor")
         except:
             pass
-        if  minimo <= entrada <= maximo:
-            break
-        elif entrada > maximo or entrada < minimo:
-            print ("Ha introducido un numero que no esta dentro del rango de numeros del juego,"
-                "repita por favor")
     return entrada
 
 def ayuda():
